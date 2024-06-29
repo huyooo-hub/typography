@@ -13,6 +13,7 @@ Repository is on GitHub: [nuxt-themes/typography](https://github.com/nuxt-themes
 See also the [online playground](https://stackblitz.com/edit/nuxt-theme-typography?file=content/index.md).
 
 Some examples:
+
 - [Basic example](/example)
 - [Tailwind Typograhy content](/tailwind)
 - [Dynamic GitHub Readme viewer](https://nuxt-typo-readme.vercel.app)
@@ -20,7 +21,7 @@ Some examples:
 ## Installation
 
 ```bash[npm]
-npm install --save-dev @nuxt-themes/typography
+npm install --save-dev @huyooo-hub/typography
 ```
 
 ## Usage
@@ -29,8 +30,8 @@ Add it to the `nuxt.config`:
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  extends: '@nuxt-themes/typography'
-})
+  extends: "@huyooo-hub/typography",
+});
 ```
 
 ## Configuration
@@ -51,23 +52,23 @@ Editing `prose` is more suited if you want to modify or adapt the appearance of 
 ### Configuration example
 
 ```ts [tokens.config.ts]
-import { defineTheme } from 'pinceau'
+import { defineTheme } from "pinceau";
 
 export default defineTheme({
   typography: {
     // This will change the general line-break size
     letterSpacings: {
-      tight: '-0.035em',
-      wide: '0.035em'
+      tight: "-0.035em",
+      wide: "0.035em",
     },
   },
   prose: {
     // This will change the fontSize of the `<ProseH1>` component
     h1: {
-      fontSize: '{typography.2xl.fontSize}'
-    }
-  }
-})
+      fontSize: "{typography.2xl.fontSize}",
+    },
+  },
+});
 ```
 
 ### Icons
@@ -79,23 +80,23 @@ export default defineAppConfig({
   prose: {
     // Default icon for all headings on hover
     headings: {
-      icon: 'ph:anchor'
+      icon: "ph:anchor",
     },
     // Icon used for h1 headings
     h1: {
-      icon: 'ph:link'
+      icon: "ph:link",
     },
     // Remove icon on h2 headings
     h2: {
-      icon: false
+      icon: false,
     },
     // Icon used for the copy button on code blocks
     copyButton: {
-      iconCopy: 'ph:copy',
-      iconCopied: 'ph:check'
-    }
-  }
-})
+      iconCopy: "ph:copy",
+      iconCopied: "ph:check",
+    },
+  },
+});
 ```
 
 Note that under the hood, Nuxt Typography uses [nuxt-icon](https://github.com/nuxt-modules/icon), this mean that you can use a custom component name or any name coming from [icones.js.org](https://icones.js.org).
@@ -110,7 +111,7 @@ To overwrite a prose component, create a component with the same name in your pr
 
 ```md [Code]
 [Link](/api/components/prose)
-````
+```
 
 [Link](/api/components/prose)
 
@@ -118,24 +119,24 @@ To overwrite a prose component, create a component with the same name in your pr
 
 ```md [Code]
 > Block quote
-````
+```
 
 > Block quote
 
 ### `<ProseCode>`
 
-```md [Code]
+````md [Code]
 \```javascript
 export default () => {
-  console.log('Code block')
+console.log('Code block')
 }
 \```
-```
+````
 
 ```ts
 export default () => {
-  console.log('Code block')
-}
+  console.log("Code block");
+};
 ```
 
 Check out the [highlight options](https://content.nuxtjs.org/api/configuration#highlight) for more about the syntax highlighting.
@@ -154,7 +155,6 @@ Check out the [highlight options](https://content.nuxtjs.org/api/configuration#h
 
 ### `<ProseH1>`
 
-
 # H1 Heading
 
 ```md [Code]
@@ -167,7 +167,7 @@ Check out the [highlight options](https://content.nuxtjs.org/api/configuration#h
 ## H2 Heading
 ```
 
-  ## H2 Heading
+## H2 Heading
 
 ### `<ProseH3>`
 
@@ -182,7 +182,7 @@ Check out the [highlight options](https://content.nuxtjs.org/api/configuration#h
 ```md [Code]
 #### H4 Heading
 ```
-  
+
 #### H4 Heading
 
 ### `<ProseH5>`
@@ -215,7 +215,7 @@ Check out the [highlight options](https://content.nuxtjs.org/api/configuration#h
 ![A Cool Image](/preview.jpg)
 ```
 
-![A Cool Image](/preview.jpg) 
+![A Cool Image](/preview.jpg)
 
 ### `<ProseUl>`
 
@@ -274,20 +274,21 @@ _Just an italic paragraph._
 ### `<ProseTable>`
 
 ```md [Code]
-| Key | Type | Description |
-|-----|------| ------------|
-| 1 | Wonderful | Table with `some long code snippet example` |
-| 2 | Wonderful | Data |
-| 3 | Wonderful | Website |
+| Key | Type      | Description                                 |
+| --- | --------- | ------------------------------------------- |
+| 1   | Wonderful | Table with `some long code snippet example` |
+| 2   | Wonderful | Data                                        |
+| 3   | Wonderful | Website                                     |
 ```
 
-| Key | Type | Description |
-|-----|------| ------------|
-| 1 | Wonderful | Table with `some long code snippet example` |
-| 2 | Wonderful | Data |
-| 3 | Wonderful | Website |
+| Key | Type      | Description                                 |
+| --- | --------- | ------------------------------------------- |
+| 1   | Wonderful | Table with `some long code snippet example` |
+| 2   | Wonderful | Data                                        |
+| 3   | Wonderful | Website                                     |
 
 It also includes:
+
 - `<ProseTbody>`
 - `<ProseTd>`
 - `<ProseTh>`
