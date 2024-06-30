@@ -1,9 +1,9 @@
-import { defineTheme } from 'pinceau'
-import theme from '@nuxt-themes/tokens/config'
+import { defineTheme } from "pinceau";
+import theme from "@huyooo-hub/tokens/config";
 
 export default defineTheme({
-  space: theme.space,
+  space: theme.huyooo.space,
   color: {
-    gray: theme.color.gray
-  }
-})
+    gray: theme.huyooo.color.gray,
+  },
+});
